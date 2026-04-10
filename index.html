@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Pulse - Pulseira inteligente que detecta sinais de pré-crise em pessoas autistas. Tecnologia e cuidado em um só dispositivo.">
+    <title>Pulse | Tecnologia que Cuida</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" role="navigation" aria-label="Navegação principal">
+        <div class="container nav-container">
+            <a href="#" class="logo" aria-label="Pulse - Início">
+                <div class="logo-icon">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true">
+                        <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2" />
+                        <path d="M16 8C16 8 12 12 12 16C12 20 16 24 16 24C16 24 20 20 20 16C20 12 16 8 16 8Z"
+                            fill="currentColor" />
+                        <circle cx="16" cy="16" r="3" fill="white" />
+                    </svg>
+                </div>
+                <span class="logo-text">Pulse</span>
+            </a>
+
+            <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-menu">
+                <span class="hamburger"></span>
+            </button>
+
+            <ul class="nav-menu" id="nav-menu" role="menubar">
+                <li role="none"><a href="#sobre" class="nav-link" role="menuitem">Sobre</a></li>
+                <li role="none"><a href="#como-funciona" class="nav-link" role="menuitem">Como Funciona</a></li>
+                <li role="none"><a href="#beneficios" class="nav-link" role="menuitem">Benefícios</a></li>
+                <li role="none"><a href="#publico" class="nav-link" role="menuitem">Para Quem</a></li>
+                <li role="none"><a href="#contato" class="nav-link cta-nav" role="menuitem">Participar</a></li>
+            </ul>
+
+            <button class="theme-toggle" aria-label="Alternar tema claro/escuro" aria-pressed="false">
+                <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" aria-hidden="true">
+                    <circle cx="12" cy="12" r="5" />
+                    <path
+                        d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+                </svg>
+                <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" aria-hidden="true">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-bg" aria-hidden="true">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="hero-badge" data-aos="fade-up">
+                    <span class="badge-dot"></span>
+                    <span>Tecnologia de ponta para cuidado humano</span>
+                </div>
+
+                <h1 id="hero-title" class="hero-title" data-aos="fade-up" data-aos-delay="100">
+                    Antecipe crises.<br>
+                    <span class="gradient-text">Cuide com tecnologia.</span>
+                </h1>
+
+                <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">
+                    A Pulse é uma pulseira inteligente que detecta sinais de pré-crise em pessoas autistas,
+                    utilizando sensores biométricos e inteligência artificial para emitir alertas antecipados
+                    e proporcionar mais segurança e tranquilidade.
+                </p>
+
+                <div class="hero-cta" data-aos="fade-up" data-aos-delay="300">
+                    <a href="#contato" class="btn btn-primary btn-lg">
+                        <span>Quero conhecer</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" aria-hidden="true">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                    <a href="#como-funciona" class="btn btn-secondary btn-lg">Como funciona</a>
+                </div>
+
+                <div class="hero-stats" data-aos="fade-up" data-aos-delay="400">
+                    <div class="stat-item">
+                        <span class="stat-number">IA</span>
+                        <span class="stat-label">Inteligência Artificial</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">24h</span>
+                        <span class="stat-label">Monitoramento contínuo</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual" data-aos="fade-left" data-aos-delay="200">
+                <div class="pulse-device">
+                    <div class="device-ring ring-1"></div>
+                    <div class="device-ring ring-2"></div>
+                    <div class="device-ring ring-3"></div>
+                    <div class="device-image">
+                        <img src="pulseira.png"
+                            alt="Pulseira inteligente Pulse com design moderno em preto e lilás, exibindo o símbolo de quebra-cabeça que representa o autismo"
+                            width="400" height="400">
+                    </div>
+                    <div class="pulse-waves">
+                        <div class="wave"></div>
+                        <div class="wave"></div>
+                        <div class="wave"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator" aria-hidden="true">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Role para explorar</span>
+        </div>
+    </section>
+
+    <!-- Problema Section -->
+    <section id="problema" class="section problema" aria-labelledby="problema-title">
+        <div class="container">
+            <div class="problema-content">
+                <div class="problema-text" data-aos="fade-right">
+                    <span class="section-tag">O Problema</span>
+                    <h2 id="problema-title" class="section-title">Crises de estresse <span
+                            class="gradient-text">imprevisíveis</span></h2>
+                    <p class="problema-description">
+                        Pessoas autistas frequentemente enfrentam situações de estresse e crises de sobrecarga sensorial
+                        que podem ser difíceis de prever e gerenciar. Para familiares e cuidadores, a incerteza
+                        constante
+                        gera ansiedade e dificulta o planejamento de atividades diárias.
+                    </p>
+
+                    <div class="problema-stats">
+                        <div class="stat-box">
+                            <span class="stat-number">70%</span>
+                            <span class="stat-text">dos familiares relatam ansiedade constante sobre crises
+                                imprevistas</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-number">50%</span>
+                            <span class="stat-text">dos episódios poderiam ser evitados com intervenção
+                                antecipada</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="problema-visual" data-aos="fade-left">
+                    <div class="problem-cards">
+                        <div class="problem-card">
+                            <div class="problem-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <path d="M12 16v-4M12 8h.01" />
+                                </svg>
+                            </div>
+                            <h4>Dificuldade de Comunicação</h4>
+                            <p>Muitas vezes a pessoa autista não consegue expressar quando está se sentindo
+                                sobrecarregada</p>
+                        </div>
+                        <div class="problem-card">
+                            <div class="problem-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                                    <path d="M2 17l10 5 10-5" />
+                                    <path d="M2 12l10 5 10-5" />
+                                </svg>
+                            </div>
+                            <h4>Impacto na Rotina</h4>
+                            <p>Crises inesperadas interrompem atividades importantes do dia a dia</p>
+                        </div>
+                        <div class="problem-card">
+                            <div class="problem-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                    <circle cx="9" cy="7" r="4" />
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                                </svg>
+                            </div>
+                            <h4>Sobrecarga dos Cuidadores</h4>
+                            <p>Familiares vivem em estado de alerta constante, afetando sua saúde mental</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solução Section -->
+    <section id="solucao" class="section solucao" aria-labelledby="solucao-title">
+        <div class="container">
+            <div class="solucao-content">
+                <div class="solucao-visual" data-aos="fade-right">
+                    <div class="solution-showcase">
+                        <div class="showcase-item active" data-tab="prevencao">
+                            <div class="showcase-icon">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                                    <path d="M9 12l2 2 4-4" />
+                                </svg>
+                            </div>
+                            <h3>Prevenção</h3>
+                            <p>Detectamos sinais antes da crise acontecer</p>
+                        </div>
+                        <div class="showcase-item" data-tab="ia">
+                            <div class="showcase-icon">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <circle cx="12" cy="12" r="3" />
+                                    <path d="M12 1v6m0 6v6m4.22-10.22l4.24-4.24M6.34 6.34L2.1 2.1" />
+                                </svg>
+                            </div>
+                            <h3>IA Personalizada</h3>
+                            <p>Algoritmos que aprendem os padrões individuais</p>
+                        </div>
+                        <div class="showcase-item" data-tab="cuidado">
+                            <div class="showcase-icon">
+                                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                                </svg>
+                            </div>
+                            <h3>Cuidado Contínuo</h3>
+                            <p>Monitoramento 24h para segurança total</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="solucao-text" data-aos="fade-left">
+                    <span class="section-tag">A Solução</span>
+                    <h2 id="solucao-title" class="section-title">Tecnologia que <span class="gradient-text">previne e
+                            protege</span></h2>
+                    <p class="solucao-description">
+                        A Pulse transforma dados biométricos em previsões acionáveis. Nossa inteligência artificial
+                        identifica os primeiros sinais de desconforto, permitindo intervenção antes que uma crise se
+                        instale.
+                    </p>
+
+                    <div class="solution-features">
+                        <div class="feature-item">
+                            <div class="feature-check">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="3">
+                                    <path d="M20 6L9 17l-5-5" />
+                                </svg>
+                            </div>
+                            <span>Detecção precoce de alterações fisiológicas</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-check">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="3">
+                                    <path d="M20 6L9 17l-5-5" />
+                                </svg>
+                            </div>
+                            <span>Alertas em tempo real para cuidadores</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-check">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="3">
+                                    <path d="M20 6L9 17l-5-5" />
+                                </svg>
+                            </div>
+                            <span>Dashboard com histórico e insights</span>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-check">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="3">
+                                    <path d="M20 6L9 17l-5-5" />
+                                </svg>
+                            </div>
+                            <span>Personalização por perfil individual</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Section -->
+    <section id="sobre" class="section sobre" aria-labelledby="sobre-title">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">Sobre o Produto</span>
+                <h2 id="sobre-title" class="section-title">Tecnologia que <span class="gradient-text">transforma
+                        vidas</span></h2>
+                <p class="section-subtitle">
+                    A Pulse combina hardware avançado com algoritmos de machine learning para criar
+                    uma solução de cuidado única e acessível.
+                </p>
+            </div>
+
+            <div class="sobre-grid">
+                <div class="sobre-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" aria-hidden="true">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Sensores Biométricos</h3>
+                    <p class="card-text">
+                        Monitoramento contínuo de batimentos cardíacos, temperatura corporal e outros
+                        indicadores fisiológicos relevantes.
+                    </p>
+                </div>
+
+                <div class="sobre-card featured" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" aria-hidden="true">
+                            <path d="M12 2a10 10 0 1 0 10 10H12V2z" />
+                            <path d="M12 2a10 10 0 0 1 10 10" />
+                            <path d="M12 12L2.5 5.5" />
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Inteligência Artificial</h3>
+                    <p class="card-text">
+                        Algoritmos de IA identificam padrões comportamentais e preveem situações
+                        de desconforto antes que se tornem crises.
+                    </p>
+                </div>
+
+                <div class="sobre-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" aria-hidden="true">
+                            <path
+                                d="M22 17H2a3 3 0 0 0 3-3V9a7 7 0 0 1 14 0v5a3 3 0 0 0 3 3zm-8.27 4a2 2 0 0 1-3.46 0" />
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Alertas Inteligentes</h3>
+                    <p class="card-text">
+                        Notificações antecipadas para usuários, familiares e cuidadores, permitindo
+                        intervenção preventiva e adequada.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Como Funciona Section -->
+    <section id="como-funciona" class="section como-funciona" aria-labelledby="como-funciona-title">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">Processo</span>
+                <h2 id="como-funciona-title" class="section-title">Como a <span class="gradient-text">Pulse
+                        funciona</span></h2>
+            </div>
+
+            <div class="steps">
+                <div class="step" data-aos="fade-up" data-aos-delay="100">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" aria-hidden="true">
+                                <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5zM16 8L2 22" />
+                                <path d="M17.5 15H9" />
+                            </svg>
+                        </div>
+                        <h3 class="step-title">Coleta de Dados</h3>
+                        <p class="step-text">
+                            Sensores biométricos de alta precisão capturam dados fisiológicos
+                            em tempo real, 24 horas por dia.
+                        </p>
+                    </div>
+                    <div class="step-connector" aria-hidden="true">
+                        <svg width="100" height="24" viewBox="0 0 100 24" fill="none">
+                            <path d="M0 12H100" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="step" data-aos="fade-up" data-aos-delay="200">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" aria-hidden="true">
+                                <circle cx="12" cy="12" r="3" />
+                                <path
+                                    d="M12 1v6m0 6v6m4.22-10.22l4.24-4.24M6.34 6.34L2.1 2.1m17.8 17.8l-4.24-4.24M6.34 17.66l-4.24 4.24" />
+                            </svg>
+                        </div>
+                        <h3 class="step-title">Análise com IA</h3>
+                        <p class="step-text">
+                            Algoritmos de machine learning processam os dados e identificam
+                            padrões que indicam situações de desconforto.
+                        </p>
+                    </div>
+                    <div class="step-connector" aria-hidden="true">
+                        <svg width="100" height="24" viewBox="0 0 100 24" fill="none">
+                            <path d="M0 12H100" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="step" data-aos="fade-up" data-aos-delay="300">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" aria-hidden="true">
+                                <path
+                                    d="M22 17H2a3 3 0 0 0 3-3V9a7 7 0 0 1 14 0v5a3 3 0 0 0 3 3zm-8.27 4a2 2 0 0 1-3.46 0" />
+                            </svg>
+                        </div>
+                        <h3 class="step-title">Alerta Preventivo</h3>
+                        <p class="step-text">
+                            Notificações são enviadas aos cuidadores e familiares, permitindo
+                            intervenção antes que a crise se instale.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefícios Section -->
+    <section id="beneficios" class="section beneficios" aria-labelledby="beneficios-title">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">Impacto</span>
+                <h2 id="beneficios-title" class="section-title">Benefícios que <span class="gradient-text">fazem a
+                        diferença</span></h2>
+            </div>
+
+            <div class="beneficios-grid">
+                <div class="beneficio-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="beneficio-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" aria-hidden="true">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                            <path d="M9 12l2 2 4-4" />
+                        </svg>
+                    </div>
+                    <h3 class="beneficio-title">Segurança para o Usuário</h3>
+                    <p class="beneficio-text">
+                        A pulseira proporciona autonomia e segurança, permitindo que pessoas
+                        autistas tenham mais liberdade em suas atividades diárias.
+                    </p>
+                </div>
+
+                <div class="beneficio-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="beneficio-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" aria-hidden="true">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                            <circle cx="9" cy="7" r="4" />
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
+                        </svg>
+                    </div>
+                    <h3 class="beneficio-title">Tranquilidade para Familiares</h3>
+                    <p class="beneficio-text">
+                        Pais e cuidadores recebem alertas antecipados, reduzindo ansiedade
+                        e permitindo resposta mais eficaz.
+                    </p>
+                </div>
+
+                <div class="beneficio-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="beneficio-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" aria-hidden="true">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                        </svg>
+                    </div>
+                    <h3 class="beneficio-title">Monitoramento Inteligente</h3>
+                    <p class="beneficio-text">
+                        Dashboard intuitivo com histórico de dados, padrões comportamentais
+                        e insights personalizados para cada usuário.
+                    </p>
+                </div>
+
+                <div class="beneficio-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="beneficio-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" aria-hidden="true">
+                            <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
+                            <path d="M7 12l3 3 7-7" />
+                        </svg>
+                    </div>
+                    <h3 class="beneficio-title">Intervenção Preventiva</h3>
+                    <p class="beneficio-text">
+                        Estratégias de coping podem ser aplicadas no momento ideal,
+                        aumentando significativamente sua eficácia.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Público Section -->
+    <section id="publico" class="section publico" aria-labelledby="publico-title">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">Para Quem</span>
+                <h2 id="publico-title" class="section-title">Quem pode se <span class="gradient-text">beneficiar</span>
+                </h2>
+            </div>
+
+            <div class="publico-grid">
+                <div class="publico-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="publico-image">
+                        <div class="publico-avatar">
+                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5" aria-hidden="true">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                                <circle cx="12" cy="7" r="4" />
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="publico-title">Pessoas Autistas</h3>
+                    <p class="publico-text">
+                        Principal beneficiário, ganhando mais autonomia, segurança e
+                        qualidade de vida no dia a dia.
+                    </p>
+                    <ul class="publico-features">
+                        <li>Maior independência</li>
+                        <li>Autoconhecimento</li>
+                        <li>Comunicação facilitada</li>
+                    </ul>
+                </div>
+
+                <div class="publico-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="publico-image">
+                        <div class="publico-avatar">
+                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5" aria-hidden="true">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                <circle cx="9" cy="7" r="4" />
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="publico-title">Familiares e Cuidadores</h3>
+                    <p class="publico-text">
+                        Redução da sobrecarga e ansiedade, com alertas que permitem
+                        intervenção no momento certo.
+                    </p>
+                    <ul class="publico-features">
+                        <li>Alertas em tempo real</li>
+                        <li>Histórico detalhado</li>
+                        <li>Decisões informadas</li>
+                    </ul>
+                </div>
+
+                <div class="publico-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="publico-image">
+                        <div class="publico-avatar">
+                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5" aria-hidden="true">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                                <polyline points="9 22 9 12 15 12 15 22" />
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="publico-title">Instituições</h3>
+                    <p class="publico-text">
+                        Escolas, clínicas e centros de apoio podem integrar a Pulse
+                        para oferecer cuidado mais completo.
+                    </p>
+                    <ul class="publico-features">
+                        <li>Protocolos integrados</li>
+                        <li>Dados agregados</li>
+                        <li>Atendimento personalizado</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Credibilidade Section -->
+    <section class="section credibilidade" aria-labelledby="credibilidade-title">
+        <div class="container">
+            <div class="credibilidade-content">
+                <div class="credibilidade-text" data-aos="fade-right">
+                    <span class="section-tag">Credibilidade</span>
+                    <h2 id="credibilidade-title" class="section-title">Base acadêmica e <span
+                            class="gradient-text">desenvolvimento estudantil</span></h2>
+                    <p class="credibilidade-description">
+                        O projeto Pulse nasceu da união entre tecnologia e propósito social.
+                        Desenvolvido por estudantes de TI comprometidos com acessibilidade e inclusão.
+                    </p>
+
+                    <div class="credibilidade-items">
+                        <div class="cred-item">
+                            <div class="cred-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" aria-hidden="true">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                                    <polyline points="22 4 12 14.01 9 11.01" />
+                                </svg>
+                            </div>
+                            <div class="cred-content">
+                                <h4>Projeto Acadêmico</h4>
+                                <p>Desenvolvido em ambiente universitário com orientação especializada</p>
+                            </div>
+                        </div>
+
+                        <div class="cred-item">
+                            <div class="cred-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" aria-hidden="true">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                    <circle cx="9" cy="7" r="4" />
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                                </svg>
+                            </div>
+                            <div class="cred-content">
+                                <h4>Estudantes de TI</h4>
+                                <p>Equipe multidisciplinar dedicada a soluções de impacto social</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="credibilidade-visual" data-aos="fade-left">
+                    <div class="certification-badge">
+                        <div class="badge-inner">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" aria-hidden="true">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                                <path d="M2 17l10 5 10-5" />
+                                <path d="M2 12l10 5 10-5" />
+                            </svg>
+                            <span class="badge-text">TI</span>
+                            <span class="badge-sub">Projeto Acadêmico</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contato" class="section cta-section" aria-labelledby="cta-title">
+        <div class="container">
+            <div class="cta-content" data-aos="fade-up">
+                <span class="section-tag">Participe</span>
+                <h2 id="cta-title" class="section-title">Faça parte dessa <span class="gradient-text">revolução</span>
+                </h2>
+                <p class="cta-description">
+                    Cadastre-se para receber novidades, participar de testes ou
+                    saber mais sobre o projeto Pulse.
+                </p>
+
+                <form class="cta-form" id="participar-form" aria-label="Formulário de participação">
+                    <div class="form-group">
+                        <label for="nome" class="visually-hidden">Nome completo</label>
+                        <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required
+                            aria-required="true" autocomplete="name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="visually-hidden">Endereço de e-mail</label>
+                        <input type="email" id="email" name="email" placeholder="Seu melhor e-mail" required
+                            aria-required="true" autocomplete="email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="perfil" class="visually-hidden">Perfil</label>
+                        <select id="perfil" name="perfil" required aria-required="true">
+                            <option value="" disabled selected>Seu perfil</option>
+                            <option value="autista">Pessoa autista</option>
+                            <option value="familiar">Familiar/Cuidador</option>
+                            <option value="instituicao">Instituição</option>
+                            <option value="profissional">Profissional de saúde</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-lg btn-full">
+                        <span>Quero participar</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" aria-hidden="true">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </form>
+
+                <p class="cta-note">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        aria-hidden="true">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                    </svg>
+                    Seus dados estão seguros. Não enviamos spam.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="footer-logo" aria-label="Pulse - Início">
+                        <div class="logo-icon">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2" />
+                                <path d="M16 8C16 8 12 12 12 16C12 20 16 24 16 24C16 24 20 20 20 16C20 12 16 8 16 8Z"
+                                    fill="currentColor" />
+                                <circle cx="16" cy="16" r="3" fill="white" />
+                            </svg>
+                        </div>
+                        <span class="logo-text">Pulse</span>
+                    </a>
+                    <p class="footer-tagline">Tecnologia que cuida, inovação que transforma.</p>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navegação</h4>
+                        <ul>
+                            <li><a href="#sobre">Sobre</a></li>
+                            <li><a href="#como-funciona">Como Funciona</a></li>
+                            <li><a href="#beneficios">Benefícios</a></li>
+                            <li><a href="#publico">Para Quem</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Contato</h4>
+                        <ul>
+                            <li><a href="mailto:contato@pulse.projeto">contato@pulse.projeto</a></li>
+                            <li><a href="#contato">Formulário</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Redes Sociais</h4>
+                        <div class="social-links">
+                            <a href="#" aria-label="Instagram" class="social-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                                </svg>
+                            </a>
+                            <a href="#" aria-label="LinkedIn" class="social-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                                    <rect x="2" y="9" width="4" height="12" />
+                                    <circle cx="4" cy="4" r="2" />
+                                </svg>
+                            </a>
+                            <a href="#" aria-label="GitHub" class="social-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Pulse. Todos os direitos reservados.</p>
+                <p>Projeto acadêmico desenvolvido com ❤️ por estudantes de TI</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div class="modal" id="success-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"
+        aria-hidden="true">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-icon">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    aria-hidden="true">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22 4 12 14.01 9 11.01" />
+                </svg>
+            </div>
+            <h3 id="modal-title">Cadastro realizado!</h3>
+            <p>Obrigado pelo interesse. Em breve entraremos em contato com mais informações sobre o projeto Pulse.</p>
+            <button class="btn btn-primary modal-close">Entendi</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
