@@ -457,6 +457,9 @@
         /**
          * Handle successful form submission e envio para o Sheets
          */
+       /**
+         * Handle successful form submission e envio para o Sheets
+         */
         handleSuccess() {
             // Seleciona o botão de submit para dar feedback visual de carregamento
             const submitBtn = elements.form.querySelector('button[type="submit"]');
@@ -469,16 +472,18 @@
 
             // Captura os dados do formulário usando a API FormData
             const formData = new FormData(elements.form);
-            const data = Object.fromEntries(formData);
+            
+            // Transforma os dados em Texto de Parâmetros de URL (perfeito para no-cors)
+            const searchParams = new URLSearchParams(formData);
             
             // Dispara os dados para o Google Sheets via API
             fetch(this.WEB_APP_URL, {
                 method: 'POST',
                 mode: 'no-cors', // Evita erros de CORS no navegador
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/x-www-form-urlencoded'
                 },
-                body: JSON.stringify(data)
+                body: searchParams.toString()
             })
             .then(() => {
                 // Sucesso: Abre o seu modal existente e limpa os campos
