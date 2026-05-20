@@ -359,11 +359,15 @@
         }
     };
 
+   
     // ============================================
     // FORM HANDLING
     // ============================================
     
     const FormHandler = {
+        // Cole aqui a URL que você gerou no deploy do Google Apps Script
+        WEB_APP_URL: 'https://script.google.com/macros/s/AKfycbxFqgBNoh1m6acmmbto086fshgco8zaWt2_OIH0cu2Lera_W1vyZcArh5XPha72wfsCBw/exec',
+
         /**
          * Initialize form functionality
          */
@@ -451,21 +455,46 @@
         },
         
         /**
-         * Handle successful form submission
+         * Handle successful form submission e envio para o Sheets
          */
         handleSuccess() {
-            // Get form data
+            // Seleciona o botão de submit para dar feedback visual de carregamento
+            const submitBtn = elements.form.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.innerHTML;
+            
+            // Feedback visual de "Enviando..."
+            submitBtn.disabled = true;
+            submitBtn.style.opacity = '0.7';
+            submitBtn.innerHTML = '<span>Enviando...</span>';
+
+            // Captura os dados do formulário usando a API FormData
             const formData = new FormData(elements.form);
             const data = Object.fromEntries(formData);
             
-            // Log data (replace with actual API call)
-            console.log('Form submitted:', data);
-            
-            // Show success modal
-            this.showModal();
-            
-            // Reset form
-            elements.form.reset();
+            // Dispara os dados para o Google Sheets via API
+            fetch(this.WEB_APP_URL, {
+                method: 'POST',
+                mode: 'no-cors', // Evita erros de CORS no navegador
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(() => {
+                // Sucesso: Abre o seu modal existente e limpa os campos
+                this.showModal();
+                elements.form.reset();
+            })
+            .catch((error) => {
+                console.error('Erro ao integrar com o Sheets:', error);
+                alert('Ocorreu um erro ao salvar sua participação. Por favor, tente novamente.');
+            })
+            .finally(() => {
+                // Restaura o botão original do formulário
+                submitBtn.disabled = false;
+                submitBtn.style.opacity = '';
+                submitBtn.innerHTML = originalBtnText;
+            });
         },
         
         /**
@@ -565,7 +594,6 @@
             });
         }
     };
-
     // ============================================
     // MICROINTERACTIONS
     // ============================================
